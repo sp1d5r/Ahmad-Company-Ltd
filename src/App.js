@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<LandingPage />} />
+          {/*<Route path="/sections" component={SectionsPage} />*/}
+          {/*/!* Assuming each section has a unique ID *!/*/}
+          {/*<Route path="/section/:id" component={SectionPage} />*/}
+          {/*/!* Assuming each component also has a unique ID *!/*/}
+          {/*<Route path="/component/:id" component={ComponentPage} />*/}
+          {/* Add a redirect for any other routes to the LandingPage or a 404 Not Found page */}
+          <Route path="/" element={<LandingPage />} />
+        </Routes>
+      </Router>
   );
 }
 
