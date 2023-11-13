@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Differentiation({}){
     return <div className={"bg-white"}>
-        <div className={"container mx-auto py-20 flex justify-center items-center h-96"}>
+        <div className={"container mx-auto py-20 flex justify-center items-center min-h-96"}>
             <div className={"flex-1 text-5xl fancy-font flex flex-col gap-8"}>
                 <p className={"hover:underline transition-all duration-500"}>BESPOKE</p>
                 <p className={"hover:underline transition-all duration-500"}>ADVANCE</p>

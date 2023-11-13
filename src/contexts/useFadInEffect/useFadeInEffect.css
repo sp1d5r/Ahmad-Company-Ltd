@@ -1,0 +1,22 @@
+.initial-fade-in {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes fadeInKeyframes {
+    from { opacity: 0; visibility: visible;}
+    to {  opacity: 1; visibility: visible;}
+}
+
+@keyframes fadeOutKeyframes {
+    from { opacity: 1; visibility: visible;}
+    to {  opacity: 0; visibility: visible;}
+}
+
+.fade-in {
+    animation: fadeInKeyframes 0.5s ease-out forwards;
+}
+
+.fade-out {
+    animation: fadeOutKeyframes 0.5s ease-out forwards;
+}
