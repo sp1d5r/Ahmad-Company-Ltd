@@ -8,7 +8,7 @@ export default function Hero(){
     const heroActionButton = useFadeInEffect(<button className="bg-white text-blue-950 font-bold py-2 px-4 rounded hover:bg-gray-100 transition duration-300">
         Explore Our Work
     </button>,
-        0.5, "2s", "0.3s")
+        0.5, "0.7s", "0.2s")
 
     return (
         <div className="bg-blue-950 text-white">

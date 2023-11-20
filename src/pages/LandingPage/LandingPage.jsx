@@ -30,7 +30,6 @@ export default function LandingPage({}){
             />
             <Differentiation />
             <ComponentLibrary />
-            <SectionsSection />
         </div>
     )
 }
