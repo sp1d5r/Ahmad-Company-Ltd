@@ -3,51 +3,28 @@ import { Link } from 'react-router-dom'; // If you're using react-router for nav
 
 const Navbar = () => {
     return (
-        <nav className="bg-white shadow-lg sticky top-0 z-20">
-            <div className="container mx-auto px-4">
-                <div className="flex justify-between">
-                    <div className="flex space-x-7">
-                        <div>
-                            {/* Website Logo */}
-                            <a href="#" className="flex items-center py-4 px-2">
-                                <span className="font-semibold text-gray-500 text-2xl fancy-font">Ahmad Company Ltd</span>
-                            </a>
-                        </div>
-                        {/* Primary Nav Items */}
+        <nav className="sticky top-0 bg-white w-full flex justify-between items-center mx-auto px-8 h-20">
+            <div className="inline-flex">
+                <a className="_o6689fn" href="/"
+                ><div className="hidden md:block">
+                    <p className={"font-bold"}>The Ahmad Company</p>
+                </div>
+                    <div className="block md:hidden">
+                       <p>The Ahmad Company</p>
                     </div>
-                    <div className="hidden md:flex items-center space-x-1">
-                        <Link to="/" className="py-4 px-2 text-gray-500  hover:text-blue-700 transition duration-300">Home</Link>
-                        <Link to="/services" className="py-4 px-2 text-gray-500 hover:text-blue-700 transition duration-300">Services</Link>
-                        <Link to="/library" className="py-4 px-2 text-gray-500  hover:text-blue-700 transition duration-300">Component Library</Link>
-                        <Link to="/contact" className="py-4 px-2 text-gray-500  hover:text-blue-700 transition duration-300">Contact</Link>
-                    </div>
-                    {/* Mobile Menu Button */}
-                    <div className="md:hidden flex items-center">
-                        <button className="outline-none mobile-menu-button">
-                            <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
-                                 x-show="!showMenu"
-                                 fill="none"
-                                 strokeLinecap="round"
-                                 strokeLinejoin="round"
-                                 strokeWidth="2"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor"
-                            >
-                                <path d="M4 6h16M4 12h16m-7 6h7"></path>
-                            </svg>
+                </a>
+            </div>
+
+            <div className="hidden sm:block flex-shrink flex-grow-0 justify-start px-2">
+                <div className="inline-block">
+                    <div className="inline-flex items-center max-w-full">
+                        <button className="flex items-center flex-grow-0 flex-shrink pl-2 relative w-60 border rounded-full px-1  py-1" type="button" onClick={() => {window.location.href="https://calendly.com/theahmadcompany/30min"}}>
+                            <div className="block flex-grow flex-shrink overflow-hidden">Chat to our team</div>
                         </button>
                     </div>
                 </div>
             </div>
-            {/* Mobile Menu */}
-            <div className="hidden mobile-menu">
-                <ul className="">
-                    <li className="active"><Link to="/" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</Link></li>
-                    <li><Link to="/services" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</Link></li>
-                    <li><Link to="/library" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Component Library</Link></li>
-                    <li><Link to="/contact" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact</Link></li>
-                </ul>
-            </div>
+
         </nav>
     )
 }
